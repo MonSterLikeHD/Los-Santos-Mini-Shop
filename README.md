@@ -59,7 +59,8 @@
 	new Floor21;
 	new Floor22;
   	new Floor23;
-
+  	public OnFilterScriptInit()
+  	{
 	SuportWall1 = CreateObject(19391, 1352.36560, -1759.63562, 14.25820,   0.00000, 0.00000, 90.00000);
 	SuportWall2 = CreateObject(19435, 1362.79285, -1759.63611, 14.25760,   0.00000, 0.00000, 90.00000);
 	SuportWall3 = CreateObject(19435, 1364.39282, -1759.63611, 14.25760,   0.00000, 0.00000, 90.00000);
@@ -115,9 +116,9 @@
 	SetObjectMaterial(SuportWall25, 0,5040, "shopliquor_las", "laspowrec2", 0);
 	SetObjectMaterial(SuportWall26, 0,5040, "shopliquor_las", "laspowrec2", 0);
 	SetObjectMaterial(SuportWall27, 0,5040, "shopliquor_las", "laspowrec2", 0);
-    SetObjectMaterial(SuportWall28, 0,5040, "shopliquor_las", "laspowrec2", 0);
-    SetObjectMaterial(SuportWall29, 0,5040, "shopliquor_las", "laspowrec2", 0);
-    SuportWall30 = CreateObject(19435, 1355.57727, -1759.63928, 12.00760,   90.00000, 0.00000, 90.00000);
+	 SetObjectMaterial(SuportWall28, 0,5040, "shopliquor_las", "laspowrec2", 0);
+    	SetObjectMaterial(SuportWall29, 0,5040, "shopliquor_las", "laspowrec2", 0);
+	  SuportWall30 = CreateObject(19435, 1355.57727, -1759.63928, 12.00760,   90.00000, 0.00000, 90.00000);
 	SuportWall31 = CreateObject(19435, 1359.03333, -1759.63928, 12.00760,   90.00000, 0.00000, 90.00000);
 	SuportWall32 = CreateObject(19435, 1362.48926, -1759.63928, 12.00760,   90.00000, 0.00000, 90.00000);
 	SuportWall33 = CreateObject(19435, 1349.31335, -1759.63928, 12.00760,   90.00000, 0.00000, 90.00000);
@@ -413,3 +414,14 @@
 	CreateObject(19435, 1359.26355, -1763.52490, 15.90350,   0.00000, 90.00000, 0.00000);
 
 	DisableInteriorEnterExits();
+	return 1;
+	}
+	
+	public OnPlayerConnect(playerid)
+	{
+    	RemoveBuildingForPlayer(playerid, 4191, 1353.2578, -1764.5313, 15.5938, 0.25);
+	RemoveBuildingForPlayer(playerid, 4022, 1353.2578, -1764.5313, 15.5938, 0.25);
+	RemoveBuildingForPlayer(playerid, 1532, 1353.1328, -1759.6563, 12.5000, 0.25);
+	return 1;
+	}
+	
